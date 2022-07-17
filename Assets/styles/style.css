@@ -201,7 +201,7 @@ input[type="range"] {
   top: 20%;
   display: flex;
   /* flex-wrap: wrap; */
-  margin: 3rem auto 1.5rem auto;
+  margin: 2.5rem auto 1rem auto;
   justify-content: center;
   align-items: center;
   /* flex-direction: row; */
