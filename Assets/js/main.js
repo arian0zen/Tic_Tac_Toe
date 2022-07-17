@@ -39,6 +39,8 @@ let clicked_box = [];
 let arr_x = [];
 let arr_o = [];
 turn = "1";
+plr1 = document.getElementById("plr1");
+plr1.classList.add("plr1_xo");
 boxes = document.getElementsByClassName("box");
 console.log(boxes);
 Array.from(boxes).forEach((item) => {
@@ -50,6 +52,11 @@ Array.from(boxes).forEach((item) => {
       item.classList.add("fa-solid", "fa-xmark", "fa-3x", "color_x");
       arr_x.push(item.id);
       clicked_box.push(item.id);
+      plr1 = document.getElementById("plr1");
+      plr1.classList.add("plr1_xo");
+      plr2 = document.getElementById("plr2");
+      plr2.classList.remove("plr1_xo");
+
 
       //now for each box checking if its' complimentary boxes are in arr_x or not || if yes then that entry won
       if (item.id == "box1") {
@@ -203,6 +210,10 @@ Array.from(boxes).forEach((item) => {
       item.classList.add("fa-regular", "fa-o", "fa-3x", "color_o");
       arr_o.push(item.id);
       clicked_box.push(item.id);
+      plr1 = document.getElementById("plr1");
+      plr1.classList.remove("plr1_xo");
+      plr2 = document.getElementById("plr2");
+      plr2.classList.add("plr1_xo");
 
       //now for each box checking if its' complimentary boxes are in arr_x or not || if yes then that entry won
       if (item.id == "box1") {
@@ -385,6 +396,10 @@ function reset_function() {
   arr_x = [];
   arr_o = [];
   clicked_box = [];
+  plr1 = document.getElementById("plr1");
+  plr1.classList.remove("plr1_xo");
+  plr2 = document.getElementById("plr2");
+  plr2.classList.remove("plr1_xo");
   let reset_modal = document.getElementById("end");
   reset_modal.classList.add("end_hidden");
   let draw_reset_modal = document.getElementById("draw");
