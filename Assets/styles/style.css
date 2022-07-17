@@ -395,3 +395,7 @@ h3:hover:after {
 .win_modal_hidden {
   display: none;
 }
+.credits{
+  text-align: center;
+  opacity: 0.18;
+}
