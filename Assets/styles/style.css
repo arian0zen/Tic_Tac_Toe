@@ -36,6 +36,13 @@ body {
   border-bottom: 3px solid #b7d3df;
   transition: 300ms ease-in-out;
 }
+.plr1_xo{
+  color: #ff0063;
+  cursor: pointer;
+
+  transition: 300ms ease-in-out;
+
+}
 
 /* arian css */
 
