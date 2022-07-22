@@ -20,13 +20,26 @@ var rangeValue = function () {
   rounds = target.innerHTML;
 };
 
+
+function botCheck(){
+  var result_ai = document.getElementsByClassName("tgl")[0];
+  if (result_ai.checked == true) {
+    console.log("single player");
+    bot = true;
+  } else{
+    console.log("Multiplayer");
+    
+  }
+}
+
+
 range.addEventListener("input", rangeValue);
 var player1Score = document.getElementById("plrscr1");
 var player2Score = document.getElementById("plrscr2");
 
   play.addEventListener("click", () => {
-    var result = document.getElementsByClassName("tgl")[0].checked ? 'yes' : 'no';
-    console.log(result)
+
+ 
 
   
   let player1 = document.getElementById("player1").value;
@@ -37,23 +50,29 @@ var player2Score = document.getElementById("plrscr2");
     document.getElementById("score-1").innerText = player1;
     document.getElementById("score-2").innerText = player2;
   }
-  console.log(player1, player2);
-  console.log("close the modal");
+  
+  
   modal.classList.add("modal_close");
 });
+
+
+
 var roundsWon_x = 0;
 var roundsWon_o = 0;
 let clicked_box = [];
 let arr_x = [];
 let arr_o = [];
 turn = "1";
+ 
+
+
+
 // plr1 = document.getElementById("plr1");
 // plr1.classList.add("plr1_xo");
 boxes = document.getElementsByClassName("box");
-console.log(boxes);
+
 Array.from(boxes).forEach((item) => {
   item.addEventListener("click", () => {
-    console.log("box clicked");
 
     //here if turn is 1, then adding that box's id to arr_x array
     if (turn == "1" && clicked_box.includes(item.id) == false) {
@@ -70,7 +89,7 @@ Array.from(boxes).forEach((item) => {
 
       //now for each box checking if its' complimentary boxes are in arr_x or not || if yes then that entry won
       if (item.id == "box1") {
-        
+        console.log(result_ai)
         
         if (
           (arr_x.includes("box2") == true && arr_x.includes("box3") == true) ||
