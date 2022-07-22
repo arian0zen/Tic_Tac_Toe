@@ -1,5 +1,9 @@
 console.log("This is a tic tac toe fun game");
 
+
+/* <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="cb5"></label> */
+
+
 // Game Logic
 let play = document.getElementById("play");
 // console.log(modal);
@@ -20,7 +24,11 @@ range.addEventListener("input", rangeValue);
 var player1Score = document.getElementById("plrscr1");
 var player2Score = document.getElementById("plrscr2");
 
-play.addEventListener("click", () => {
+  play.addEventListener("click", () => {
+    var result = document.getElementsByClassName("tgl")[0].checked ? 'yes' : 'no';
+    console.log(result)
+
+  
   let player1 = document.getElementById("player1").value;
   let player2 = document.getElementById("player2").value;
   if (player1 && player2 != undefined) {
@@ -448,3 +456,5 @@ function win_modal() {
     window.location.reload();
   });
 }
+
+
