@@ -65,10 +65,13 @@ Array.from(boxes).forEach((item) => {
       plr2 = document.getElementById("plr2");
       plr2.classList.add("plr1_xo");
 
+      let ai_number = item.innerText; //the magic number
+
 
       //now for each box checking if its' complimentary boxes are in arr_x or not || if yes then that entry won
       if (item.id == "box1") {
-        console.log("box 1 clicked");
+        
+        
         if (
           (arr_x.includes("box2") == true && arr_x.includes("box3") == true) ||
           (arr_x.includes("box4") == true && arr_x.includes("box7") == true) ||

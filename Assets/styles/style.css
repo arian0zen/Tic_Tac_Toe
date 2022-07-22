@@ -232,7 +232,7 @@ input[type="range"] {
 }
 .box:hover {
   background-color: #66bfbf;
-  transition: 0.s ease-in-out;
+  
 }
 .box_win {
   background-color: #e74c3c;
@@ -498,4 +498,10 @@ h3:hover:after {
 }
 .tgl-flip:checked + .tgl-btn:active:after {
   transform: rotateY(20deg);
+}
+
+/* ai implementation*/
+.sq_text{
+  position: absolute;
+  opacity: 0;
 }
