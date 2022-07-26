@@ -67,8 +67,7 @@ turn = "1";
 // plr1.classList.add("plr1_xo");
 boxes = document.getElementsByClassName("box");
 
-if (bot_result == 'no'){
-  console.log("single player");
+
   Array.from(boxes).forEach((item) => {
     item.addEventListener("click", () => {
       //here if turn is 1, then adding that box's id to arr_x array
@@ -228,7 +227,7 @@ if (bot_result == 'no'){
         }
         turn = "0";
         //here if turn is 1, then adding that box's id to arr_x array
-      } else if (turn == "0" && clicked_box.includes(item.id) == false) {
+      } else if (turn == "0" && clicked_box.includes(item.id) == false && bot_result == 'no') {
         item.classList.add("fa-regular", "fa-o", "fa-3x", "color_o");
         arr_o.push(item.id);
         clicked_box.push(item.id);
@@ -382,13 +381,13 @@ if (bot_result == 'no'){
         }
   
         turn = "1";
+      } else{
+        console.log("waiting for bot's move..");
       }
     });
   });
 
-} else{
-  console.log("multiplayer game");
-}
+
 
 
 
