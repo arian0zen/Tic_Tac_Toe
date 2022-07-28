@@ -116,6 +116,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box3") {
         if (
@@ -132,6 +135,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box4") {
         if (
@@ -147,6 +153,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box5") {
         if (
@@ -164,6 +173,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box6") {
         if (
@@ -179,6 +191,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box7") {
         if (
@@ -195,6 +210,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box8") {
         if (
@@ -210,6 +228,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       } else if (item.id == "box9") {
         if (
@@ -226,6 +247,9 @@ Array.from(boxes).forEach((item) => {
           }
         } else if (clicked_box.length == 9) {
           draw_reset_modal();
+        } else if (bot_result == "yes") {
+          console.log("waiting for bot's move..");
+          setTimeout(bot_move, 300);
         }
       }
 
@@ -478,7 +502,7 @@ function win_modal() {
 
 // AI ALGORITHM FUNCTIONS
 var bot_move = function () {
-  if (ai_x.includes(5) == false) {
+  if (clicked_box.includes("box5") == false) {
     console.log("mid move");
     var item = document.getElementById("box5");
     item.classList.add("fa-regular", "fa-o", "fa-3x", "color_o");
@@ -488,5 +512,29 @@ var bot_move = function () {
     plr1.classList.add("plr1_xo");
     plr2 = document.getElementById("plr2");
     plr2.classList.remove("plr1_xo");
+  } else {
+    let diff = 0;
+    let item_id = "";
+    for (var i = 0; i < ai_x.length; i++) {
+      for (var j = 0; j < ai_x.length; j++){
+        diff = Math.abs(15 - (ai_x[i] + ai_x[j]));
+        console.log(diff);
+        Array.from(boxes).forEach((box) => {
+          if (box.innerText == diff) {
+            item_id = box.id;
+          }
+        });
+      }
+
+      var item = document.getElementById(item_id);
+      item.classList.add("fa-regular", "fa-o", "fa-3x", "color_o");
+      arr_o.push(item.id);
+      clicked_box.push(item.id);
+      plr1 = document.getElementById("plr1");
+      plr1.classList.add("plr1_xo");
+      plr2 = document.getElementById("plr2");
+      plr2.classList.remove("plr1_xo");
+    }
   }
+  turn = "1";
 };
