@@ -195,7 +195,7 @@ Don't forget to give the project a star! Thanks again!
 
 - [Tuhin Bar](https://www.linkedin.com/in/tuhin-bar/) or [Arian Shaikh](https://www.linkedin.com/in/arian-shaikh-3b679b240/)
 
-Project Link: [https://github.com/TuhinBar/Tic_Tac_Toe](https://github.com//TuhinBar/Tic_Tac_Toe)
+Project Link: [https://github.com/TuhinBar/Tic_Tac_Toe](arian0zen.github.io/tic_tac_toe/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
