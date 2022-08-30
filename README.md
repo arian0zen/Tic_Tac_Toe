@@ -152,7 +152,7 @@ And the most important thing, go with a design or wireframe. Don't go blank it w
 
 It is a fun projects and a really cool game with uh! impressive UI I guess! So you can use it to show off your strategic skill to your friend. Or you can use it for a litle timepass. Have fun!
 
-_For more examples, please refer to the [Documentation](https://github.com/TuhinBar/Tic_Tac_Toe/README.md)_
+_For more examples, please refer to the [Documentation](https://github.com/arian0zen/Tic_Tac_Toe/README.md)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
